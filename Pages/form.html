@@ -110,12 +110,23 @@
       });
 
       //UC4 Password length Validation
+      //   const password = document.querySelector("#pwd");
+      //   const passwordError = document.querySelector(".pwd-error");
+      //   password.addEventListener("input", function () {
+      //     let pwdRegex = RegExp("^.{8,}");
+      //     if (pwdRegex.test(password.value)) passwordError.textContent = "";
+      //     else passwordError.textContent = "Password must be 8 digits long";
+      //   });
+
+      //UC5 all rules of Password validation
       const password = document.querySelector("#pwd");
       const passwordError = document.querySelector(".pwd-error");
       password.addEventListener("input", function () {
-        let pwdRegex = RegExp("^.{8,}");
+        let pwdRegex = RegExp(
+          "(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,12}"
+        );
         if (pwdRegex.test(password.value)) passwordError.textContent = "";
-        else passwordError.textContent = "Password must be 8 digits long";
+        else passwordError.textContent = "Please follow the password rules";
       });
     </script>
   </body>
