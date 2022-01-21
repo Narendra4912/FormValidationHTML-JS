@@ -37,6 +37,7 @@
       <div>
         <label for="tel">Phone input type : </label>
         <input type="tel" id="tel" name="tel" />
+        <error-output class="tel-error"></error-output>
       </div>
 
       <div>
@@ -66,8 +67,7 @@
     </form>
 
     <script>
-
-    // UC1 - name validation
+      // UC1 - name validation
       const text = document.querySelector("#nameText");
       const textError = document.querySelector(".text-error");
       text.addEventListener("input", function () {
@@ -97,7 +97,16 @@
         else emailError.textContent = "Enter email in correct format";
       });
 
-      
+      //UC3 Mobile Number validation
+      const mobile = document.querySelector("#tel");
+      const mobileError = document.querySelector(".tel-error");
+      mobile.addEventListener("input", function () {
+        let mobileRegex = RegExp("^[1-9]{2}( )[0-9]{10}$");
+        if (mobileRegex.test(mobile.value)) mobileError.textContent = "";
+        else
+          mobileError.textContent =
+            "Enter mobile number like => <Country code> <space> <number>";
+      });
     </script>
   </body>
 </html>
