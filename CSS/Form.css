@@ -1,0 +1,45 @@
+.headerContainer
+{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    background-color: tomato;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+body{
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2em;
+}
+error-output
+{
+    font-size: 15px;
+    color: red;
+    font-style: italic;
+}
+form{
+    margin: 50px;
+}
+div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+input{
+    flex: auto;
+}
+label{
+    text-align: right;
+    width: 30%;
+    margin-right: 2%;
+}
+button{
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    color: black;
+    background-color: chartreuse;
+}
